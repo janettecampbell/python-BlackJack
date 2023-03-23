@@ -119,7 +119,6 @@ class Game:
             player_hand.display()
             dealer_hand.display()
 
-
             choice = ""
 
             while player_hand.get_value() < 21 and choice not in ['s', 'stand']:
