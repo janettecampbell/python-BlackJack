@@ -132,9 +132,6 @@ class Game:
                     player_hand.add_card(deck.deal(1))
                     player_hand.display()
 
-            if self.check_winner(player_hand, dealer_hand):
-                continue
-
             player_hand_value = player_hand.get_value()
             dealer_hand_value = dealer_hand.get_value()
 
@@ -144,16 +141,13 @@ class Game:
 
             dealer_hand.display(show_all_dealer_cards=True)
 
-            if self.check_winner(player_hand, dealer_hand):
-                continue
-
             print("Final Results")
             print("Your hand:", player_hand_value)
             print("Dealer hand:", dealer_hand_value)
 
-            self.check_winner(player_hand, dealer_hand, True)
+            self.check_winner(player_hand, dealer_hand)
 
-        print("\nTHanks for playing!")
+        print("\nThanks for playing!")
 
     def check_winner(self, player_hand, dealer_hand, game_over=False):
         if not game_over:
