@@ -139,7 +139,7 @@ class Game:
             dealer_hand_value = dealer_hand.get_value()
 
             while dealer_hand_value < 17:
-                dealer_hand.add_card(deck.deal())
+                dealer_hand.add_card(deck.deal(1))
                 dealer_hand_value = dealer_hand.get_value()
 
             dealer_hand.display(show_all_dealer_cards=True)
