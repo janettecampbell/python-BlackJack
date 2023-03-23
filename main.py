@@ -140,7 +140,7 @@ class Game:
                 dealer_hand_value = dealer_hand.get_value()
 
             dealer_hand.display(show_all_dealer_cards=True)
-
+            print()
             print("Final Results")
             print("Your hand:", player_hand_value)
             print("Dealer hand:", dealer_hand_value)
